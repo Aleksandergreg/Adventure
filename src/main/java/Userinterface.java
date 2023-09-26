@@ -21,7 +21,7 @@ public class Userinterface {
                 case "south", "s", "go south" -> {
                     System.out.println(Farve.ANSI_RESET + Farve.ANSI_BLUE + "Going south" + Farve.ANSI_RESET);
                     adventure.goSouth();
-                    System.out.println(Farve.ANSI_GREEN + "You are inside of: "+adventure.getCurrent().getName() + adventure.getCurrent().getDescription() + Farve.ANSI_RESET);
+                   // System.out.println(Farve.ANSI_GREEN + "You are inside of: "+adventure.getCurrent().getName() + adventure.getCurrent().getDescription() + Farve.ANSI_RESET);
                 }
                 case "east", "e", "go east" -> {
                     System.out.println("Going east");

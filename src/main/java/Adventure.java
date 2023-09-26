@@ -65,6 +65,7 @@ public class Adventure {
     public void goSouth(){
          if (currentRoom.getSouthRoom() != null){
              currentRoom = currentRoom.getSouthRoom();
+             System.out.println(currentRoom.getName() + currentRoom.getDescription());
          }
          else{
              System.out.println("No door that direction");
