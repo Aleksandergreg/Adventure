@@ -2,10 +2,12 @@ public class Adventure {
 
     private Room currentRoom;
     private Room abrakadabraRoom;
-//Contructor calling the setForRooms-method
-     public Adventure(){
-         setForRooms();
-     }
+
+    //Contructor calling the setForRooms-method
+    public Adventure() {
+        setForRooms();
+    }
+
     public void setForRooms() {
 
         Room room1 = new Room("Room 1 ", "The brown bear is lurking");
@@ -54,8 +56,9 @@ public class Adventure {
     public Room getCurrent() {
         return currentRoom;
     }
-    public Room getAbrakadabraRoom(){
-         return abrakadabraRoom;
+
+    public Room getAbrakadabraRoom() {
+        return abrakadabraRoom;
     }
 
     public void goNorth() {
@@ -67,38 +70,36 @@ public class Adventure {
 
 
     }
-    public void goSouth(){
-         if (currentRoom.getSouthRoom() != null){
-             currentRoom = currentRoom.getSouthRoom();
-             System.out.println(currentRoom.getName() + currentRoom.getDescription());
-         }
-         else{
-             System.out.println("No door that direction");
-         }
-    }
-    public void goEast(){
-         if(currentRoom.getEastRoom() != null){
-             currentRoom = currentRoom.getEastRoom();
-         }
-         else{
-             System.out.println("No door that direction");
-         }
-    }
-    public void goWest(){
-         if (currentRoom.getEastRoom() !=null){
-             currentRoom = currentRoom.getWestRoom();
-         }
-         else {
-             System.out.println("No door that direction");
-         }
-    }
-    public void lockDoor() {
 
+    public void goSouth() {
+        if (currentRoom.getSouthRoom() != null) {
+            currentRoom = currentRoom.getSouthRoom();
+            System.out.println(currentRoom.getName() + currentRoom.getDescription());
+        } else {
+            System.out.println("No door that direction");
+        }
     }
-    public void abrakadabra(){
+
+    public void goEast() {
+        if (currentRoom.getEastRoom() != null) {
+            currentRoom = currentRoom.getEastRoom();
+        } else {
+            System.out.println("No door that direction");
+        }
+    }
+
+    public void goWest() {
+        if (currentRoom.getEastRoom() != null) {
+            currentRoom = currentRoom.getWestRoom();
+        } else {
+            System.out.println("No door that direction");
+        }
+    }
+
+    public void abrakadabra() {
         Room newAbrakadabraRoom = currentRoom;
-         currentRoom = abrakadabraRoom;
-         abrakadabraRoom = newAbrakadabraRoom;
+        currentRoom = abrakadabraRoom;
+        abrakadabraRoom = newAbrakadabraRoom;
 
     }
 }
