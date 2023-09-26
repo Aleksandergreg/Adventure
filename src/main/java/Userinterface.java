@@ -33,10 +33,10 @@ public class Userinterface {
                     adventure.goWest();
                     System.out.println("You are inside of: " + adventure.getCurrent().getName() + adventure.getCurrent().getDescription());
                 }
-                case "look", "l" ->
+                case "look", "l", "looking around" ->
                         System.out.println("You are inside of " + adventure.getCurrent().getName() + adventure.getCurrent().getDescription());
                 case "exit" -> {
-                    System.out.println("Home of the free because of the brave - Thank you for playing");
+                    System.out.println(Farve.ANSI_BLUE + "Home of the free" +Farve.ANSI_WHITE+" -because of the brave" +Farve.ANSI_RED+"- Thank you for playing");
                     System.exit(0);
                 }
                 case "info" -> System.out.println("""

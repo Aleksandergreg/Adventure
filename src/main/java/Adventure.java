@@ -11,7 +11,7 @@ public class Adventure {
         Room room2 = new Room("Room 2 ", "The grizzly bear is lurking");
         Room room3 = new Room("Room 3 ", "The honey badger is lurking");
         Room room4 = new Room("Room 4 ", "The Winnie the Pooh is lurking");
-        Room room5 = new Room("Room 5 ", "The Donkey is lurking, and it has a pot of gold for you WOOOHOOO");
+        Room room5 = new Room("Room 5 ", "GC Kuss is awaiting you, and he gifted you the brand new Cervelo, huge grats BUDDY!");
         Room room6 = new Room("Room 6 ", "The Panda bear is lurking");
         Room room7 = new Room("Room 7 ", "The Asian honeybear bear is lurking");
         Room room8 = new Room("Room 8 ", "The polar bear is lurking");
@@ -85,5 +85,8 @@ public class Adventure {
          else {
              System.out.println("No door that direction");
          }
+    }
+    public void lockDoor() {
+
     }
 }
