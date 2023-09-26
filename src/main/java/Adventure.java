@@ -1,6 +1,7 @@
 public class Adventure {
 
     private Room currentRoom;
+    private Room abrakadabraRoom;
 //Contructor calling the setForRooms-method
      public Adventure(){
          setForRooms();
@@ -18,6 +19,7 @@ public class Adventure {
         Room room9 = new Room("Room 9 ", "The sun bear is lurking");
 
         currentRoom = room1;
+        abrakadabraRoom = room1;
 
         //Setters for each room connecting them
         //Room 1
@@ -51,6 +53,9 @@ public class Adventure {
 
     public Room getCurrent() {
         return currentRoom;
+    }
+    public Room getAbrakadabraRoom(){
+         return abrakadabraRoom;
     }
 
     public void goNorth() {
@@ -88,6 +93,12 @@ public class Adventure {
          }
     }
     public void lockDoor() {
+
+    }
+    public void abrakadabra(){
+        Room newAbrakadabraRoom = currentRoom;
+         currentRoom = abrakadabraRoom;
+         abrakadabraRoom = newAbrakadabraRoom;
 
     }
 }

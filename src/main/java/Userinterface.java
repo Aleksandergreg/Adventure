@@ -44,6 +44,9 @@ public class Userinterface {
                         Write look to view your current room
                         Write exit to exit the game
                         """);
+                case "abrakadabra", "teleport" -> {adventure.abrakadabra();
+                    System.out.println("You are inside of:" + adventure.getAbrakadabraRoom().getName());
+                }
                 default -> System.out.println("Ugyldigt input");
             }
         }
