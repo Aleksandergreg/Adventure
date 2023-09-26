@@ -2,6 +2,7 @@ public class Adventure {
 
     private Room currentRoom;
     private Room abrakadabraRoom;
+    private Room newAbrakadabraRoom;
 
     //Contructor calling the setForRooms-method
     public Adventure() {
@@ -19,6 +20,7 @@ public class Adventure {
         Room room7 = new Room("Room 7 ", "The Asian honeybear bear is lurking");
         Room room8 = new Room("Room 8 ", "The polar bear is lurking");
         Room room9 = new Room("Room 9 ", "The sun bear is lurking");
+
 
         currentRoom = room1;
         abrakadabraRoom = room1;
@@ -97,7 +99,7 @@ public class Adventure {
     }
 
     public void abrakadabra() {
-        Room newAbrakadabraRoom = currentRoom;
+        newAbrakadabraRoom = currentRoom;
         currentRoom = abrakadabraRoom;
         abrakadabraRoom = newAbrakadabraRoom;
 
