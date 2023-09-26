@@ -16,12 +16,11 @@ public class Userinterface {
                 case "north", "n", "go north" -> {
                     System.out.println("going north");
                     adventure.goNorth();
-                    System.out.println(Farve.ANSI_RED + "You are inside of: " + adventure.getCurrent().getName() + adventure.getCurrent().getDescription());
+                    System.out.printf(Farve.ANSI_PURPLE + "You are inside of %s" +Farve.ANSI_RED + "%s\n", adventure.getCurrent().getName(), adventure.getCurrent().getDescription());
                 }
                 case "south", "s", "go south" -> {
-                    System.out.println(Farve.ANSI_RESET + Farve.ANSI_BLUE + "Going south" + Farve.ANSI_RESET);
                     adventure.goSouth();
-                    // System.out.println(Farve.ANSI_GREEN + "You are inside of: "+adventure.getCurrent().getName() + adventure.getCurrent().getDescription() + Farve.ANSI_RESET);
+                    System.out.println(Farve.ANSI_GREEN + "You are inside of: "+adventure.getCurrent().getName()+ Farve.ANSI_RED + adventure.getCurrent().getDescription() + Farve.ANSI_RESET);
                 }
                 case "east", "e", "go east" -> {
                     System.out.println("Going east");
@@ -40,7 +39,7 @@ public class Userinterface {
                     System.exit(0);
                 }
                 case "info", "help" -> System.out.println("""
-                        Write north, south, east or west to move in this dirrection
+                        Write north, south, east or west to move in this direction
                         Write look to view your current room
                         Write exit to exit the game
                         There is also a teleporter function, with the keyword abrakadabra - try it out!
