@@ -10,18 +10,18 @@ public class Userinterface {
 
 
         String userInput = "";
-        while (!userInput.equals("exit")) {
-            userInput = input.nextLine().toLowerCase();
+        while (true) {
+            userInput = input.nextLine().toLowerCase().trim();
             switch (userInput) {
                 case "north", "n", "go north" -> {
                     System.out.println("going north");
                     adventure.goNorth();
-                    System.out.println("You are inside of: "+adventure.getCurrent().getName() + adventure.getCurrent().getDescription());
+                    System.out.println(Farve.ANSI_RED + "You are inside of: "+adventure.getCurrent().getName() + adventure.getCurrent().getDescription());
                 }
                 case "south", "s", "go south" -> {
-                    System.out.println("Going south");
+                    System.out.println(Farve.ANSI_RESET + Farve.ANSI_BLUE + "Going south" + Farve.ANSI_RESET);
                     adventure.goSouth();
-                    System.out.println("You are inside of: "+adventure.getCurrent().getName() + adventure.getCurrent().getDescription());
+                    System.out.println(Farve.ANSI_GREEN + "You are inside of: "+adventure.getCurrent().getName() + adventure.getCurrent().getDescription() + Farve.ANSI_RESET);
                 }
                 case "east", "e", "go east" -> {
                     System.out.println("Going east");
@@ -44,6 +44,7 @@ public class Userinterface {
                         Write look to view your current room
                         Write exit to exit the game
                         """);
+                default -> System.out.println("Ugyldigt input");
             }
         }
     }
