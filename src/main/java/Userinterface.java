@@ -31,7 +31,7 @@ public class Userinterface {
                 case "west", "w", "go west" -> {
                     System.out.println("Going west");
                     adventure.goWest();
-                    System.out.println("You are inside of: " + adventure.getCurrent().getName() + adventure.getCurrent().getDescription());
+                    System.out.printf(Farve.ANSI_PURPLE+"You are inside of %s" + Farve.ANSI_RED + "%s\n", adventure.getCurrent().getName(), adventure.getCurrent().getDescription());
                 }
                 case "look", "l", "looking around" ->
                         System.out.println("You are inside of " + adventure.getCurrent().getName() + adventure.getCurrent().getDescription());
