@@ -9,7 +9,7 @@ public class Userinterface {
         System.out.println("Welcome to the adventure game");
 
 
-        String userInput = "";
+        String userInput;
         while (true) {
             userInput = input.nextLine().toLowerCase().trim();
             switch (userInput) {
