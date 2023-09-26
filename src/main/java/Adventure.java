@@ -1,7 +1,7 @@
 public class Adventure {
 
     private Room currentRoom;
-
+//Contructor calling the setForRooms-method
      public Adventure(){
          setForRooms();
      }

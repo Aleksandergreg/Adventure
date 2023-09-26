@@ -35,10 +35,13 @@ public class Userinterface {
                 }
                 case "look", "l" ->
                         System.out.println("You are inside of " + adventure.getCurrent().getName() + adventure.getCurrent().getDescription());
-                case "exit" -> System.exit(0);
+                case "exit" -> {
+                    System.out.println("Home of the free because of the brave - Thank you for playing");
+                    System.exit(0);
+                }
                 case "info" -> System.out.println("""
                         Write north, south, east or west to move in this dirrection
-                        Write look to view your current room 
+                        Write look to view your current room
                         Write exit to exit the game
                         """);
             }
