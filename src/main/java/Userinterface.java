@@ -45,10 +45,10 @@ public class Userinterface {
                         There is also a teleporter function, with the keyword abrakadabra - try it out!
                         """);
                 case "abrakadabra", "teleport" -> {
-                    adventure.abrakadabra();
                     System.out.println("You are inside of:" + adventure.getAbrakadabraRoom().getName());
+                    adventure.abrakadabra();
                 }
-                default -> System.out.println("Ugyldigt input");
+                default -> System.out.println("Invalid input, please try again");
             }
         }
     }
