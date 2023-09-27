@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Userinterface {
-    private Scanner input = new Scanner(System.in);
+    private Scanner     input = new Scanner(System.in);
     public Adventure adventure = new Adventure();
 
 

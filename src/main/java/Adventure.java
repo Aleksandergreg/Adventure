@@ -20,8 +20,7 @@ public class Adventure {
         Room room8 = new Room("Room 8 ", "The polar bear is lurking");
         Room room9 = new Room("Room 9 ", "The sun bear is lurking");
 
-        currentRoom = room1;
-        abrakadabraRoom = room1;
+
 
         //Setters for each room connecting them
         //Room 1
@@ -52,6 +51,9 @@ public class Adventure {
         room9.setNorthRoom(room6);
         room9.setWestRoom(room8);
         room9.setEastRoom(room2);
+
+        currentRoom = room1;
+        abrakadabraRoom = room1;
     }
 
     public Room getCurrent() {
